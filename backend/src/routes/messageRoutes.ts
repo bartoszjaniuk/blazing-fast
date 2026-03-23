@@ -1,12 +1,9 @@
 import { Router } from "express";
+import { protectRoute } from "../middleware/auth";
+import { getMessages } from "../controllers/messageController";
 
 const router = Router();
 
-router.get("/health", (req, res) => {
-	res.json({
-		message: "Message routes are working",
-		success: true,
-	});
-});
+router.get("/chat/:chatId", protectRoute, getMessages);
 
 export default router;
