@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: blazing-fast-backend
+    runtime: docker
+    plan: free
+    rootDir: backend
+    autoDeploy: true
+    healthCheckPath: /health
