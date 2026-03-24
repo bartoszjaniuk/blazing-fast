@@ -3,6 +3,6 @@ services:
     name: blazing-fast-backend
     runtime: docker
     plan: free
-    rootDir: backend
+    rootDir: .
     autoDeploy: true
     healthCheckPath: /health
